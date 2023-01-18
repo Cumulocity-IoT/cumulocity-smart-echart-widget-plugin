@@ -170,7 +170,7 @@ NOTE : In Simple charts, X-Axis can be category or value type and Y-Axis can be 
 
 ------------------------------
 
-##**Aggregation Utility**
+## **Aggregation Utility**
 
 Widget also provides aggregation functions as below:
 
