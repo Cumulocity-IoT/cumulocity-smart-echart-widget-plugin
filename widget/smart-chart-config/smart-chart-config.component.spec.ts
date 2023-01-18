@@ -25,9 +25,9 @@ describe('SmartChartConfigComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SmartChartConfigComponent ]
+      declarations: [SmartChartConfigComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

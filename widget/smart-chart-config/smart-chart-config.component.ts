@@ -426,7 +426,7 @@ export class SmartChartConfigComponent implements OnInit {
       this.config.showDatahubInput = true;
       this.config.showApiInput = false;
       this.config.showMicroserviceInput = false;
-    }else if (value === 'microservice') {
+    } else if (value === 'microservice') {
       this.config.showMicroserviceInput = true;
       this.config.showApiInput = false;
       this.config.showDatahubInput = false;

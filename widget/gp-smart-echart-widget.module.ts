@@ -24,36 +24,37 @@ import { SmartChartConfigComponent } from './smart-chart-config/smart-chart-conf
 import { AngularResizedEventModule } from 'angular-resize-event';
 
 @NgModule({
-  declarations: [GpSmartEchartWidgetComponent,SmartChartConfigComponent],
+  declarations: [GpSmartEchartWidgetComponent, SmartChartConfigComponent],
   imports: [
     CoreModule,
     NgxEchartsModule,
     AngularResizedEventModule
   ],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
     {
-        provide:  HOOK_COMPONENTS,
-        multi: true,
-        useValue: {
-            id: 'smart.echart',
-            label: 'Smart eChart',
-            description: 'linechart derived from api data',
-            previewImage: preview.previewImage,
-            component: GpSmartEchartWidgetComponent,
-            configComponent: SmartChartConfigComponent,
-            data : {
-                ng1 : {
-                    options: { noDeviceTarget: false,
-                    noNewWidgets: false,
-                    deviceTargetNotRequired: true,
-                    groupsSelectable: true
-                    },
-                }
-            }
+      provide: HOOK_COMPONENTS,
+      multi: true,
+      useValue: {
+        id: 'smart.echart',
+        label: 'Smart eChart',
+        description: 'linechart derived from api data',
+        previewImage: preview.previewImage,
+        component: GpSmartEchartWidgetComponent,
+        configComponent: SmartChartConfigComponent,
+        data: {
+          ng1: {
+            options: {
+              noDeviceTarget: false,
+              noNewWidgets: false,
+              deviceTargetNotRequired: true,
+              groupsSelectable: true
+            },
+          }
         }
+      }
     }],
-  exports: [GpSmartEchartWidgetComponent,SmartChartConfigComponent],
-  entryComponents: [GpSmartEchartWidgetComponent,SmartChartConfigComponent]
+  exports: [GpSmartEchartWidgetComponent, SmartChartConfigComponent],
+  entryComponents: [GpSmartEchartWidgetComponent, SmartChartConfigComponent]
 })
 export class GpSmartEchartWidgetModule { }

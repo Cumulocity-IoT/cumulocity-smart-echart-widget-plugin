@@ -1,9 +1,9 @@
 {
   "name": "cumulocity-smart-echart-widget-plugin",
   "version": "1.0.0-beta",
-  "description": "This is the Cumulocity module federation plugin. Cumulocity IoT Smart EChart widget help you to display API and datahub response on a chart with color configurations.",
+  "description": "The Smart Echart widget helps you to display API and datahub response on a chart with color configurations.",
   "scripts": {
-    "start": "c8ycli server --env.beta=true",
+    "start": "c8ycli server",
     "build": "c8ycli build",
     "deploy": "c8ycli deploy",
     "postinstall": "ngcc",
@@ -34,7 +34,7 @@
     "angular-resize-event": "^2.1.0",
     "echarts-simple-transform": "^1.0.0",
     "echarts": "^5.2.2",
-    "ngx-bootstrap": "6.2.0",
+    "ngx-bootstrap": "9.0.0",
     "ngx-echarts": "^7.1.0"
   },
   "devDependencies": {
@@ -58,22 +58,25 @@
   },
   "c8y": {
     "application": {
-      "name": "Cumulocity Smart EChart Widget Plugin",
-      "description": "Cumulocity IoT Smart EChart Widget Plugin with module federation.Cumulocity IoT Smart EChart widget help you to display API and datahub response on a chart with color configurations.",
+      "name": "Cumulocity Smart Echart Widget Plugin",
+      "description": "The Smart Echart widget helps you to display API and datahub response on a chart with color configurations.",
       "contextPath": "smart-echart-runtime-widget",
       "key": "smart-echart-runtime-widget-application-key",
-      "globalTitle": "Cumulocity IoT Smart EChart Widget Plugin with Module Federation",
+      "globalTitle": "The Smart Echart widget helps you to display API and datahub response on a chart with color configurations.",
       "tabsHorizontal": true,
       "isPackage": true,
       "noAppSwitcher": true,
       "package": "plugin",
+      "icon": {
+        "class": "dlt-c8y-icon-cloud-bar-chart"
+      },
       "requiredPlatformVersion": ">=1016.0.0",
       "exports": [
         {
           "name": "Cumulocity Smart EChart Widget Plugin",
           "module": "GpSmartEchartWidgetModule",
           "path": "./widget/gp-smart-echart-widget.module.ts",
-          "description": "This is the Cumulocity module federation plugin. Cumulocity IoT Smart Echart widget help you to display API and datahub response on a chart with color configurations."
+          "description": "The Smart Echart widget helps you to display API and datahub response on a chart with color configurations."
         }
       ],
       "remotes": {
