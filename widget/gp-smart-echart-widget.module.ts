@@ -37,8 +37,8 @@ import { AngularResizedEventModule } from 'angular-resize-event';
       multi: true,
       useValue: {
         id: 'smart.echart',
-        label: 'Smart eChart',
-        description: 'linechart derived from api data',
+        label: 'Smart Echart',
+        description: 'The Smart Echart widget helps you to display API and datahub response on a chart with color configurations.',
         previewImage: preview.previewImage,
         component: GpSmartEchartWidgetComponent,
         configComponent: SmartChartConfigComponent,

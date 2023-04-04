@@ -1,15 +1,13 @@
-# Cumulocity Smart Echart Widget Plugin [<img width="35" src="https://user-images.githubusercontent.com/32765455/211497905-561e9197-18b9-43d5-a023-071d3635f4eb.png"/>](https://github.com/SoftwareAG/cumulocity-smart-echart-widget-plugin/releases/download/1.0.0-beta/smart-echart-runtime-widget-1.0.0-beta.zip)
+# Cumulocity Smart Echart Widget Plugin [<img width="35" src="https://user-images.githubusercontent.com/32765455/211497905-561e9197-18b9-43d5-a023-071d3635f4eb.png"/>](https://github.com/SoftwareAG/cumulocity-smart-echart-widget-plugin/releases/download/1.0.0/sag-ps-pkg-smart-echart-1.0.0.zip)
 
 The Smart Echart Widget Plugin is the Cumulocity module federation plugin created using c8ycli. This plugin can be used in Application Builder or Cockpit.
 The Smart Echart Widget Plugin helps you to display API and datahub response on a chart with color configurations.
-
-### Please note that this plugin is in currently under BETA mode.
 
 ### Please choose Smart Echart Widget release based on Cumulocity/Application builder version:
 
 |APPLICATION BUILDER | CUMULOCITY | SMART ECHART WIDGET PLUGIN  |
 |--------------------|------------|-----------------------------|
-| 2.0.x(coming soon) | >= 1016.x.x| 1.x.x                       |
+| 2.0.x              | >= 1016.x.x| 1.x.x                       |
 
 ![Picture1](https://user-images.githubusercontent.com/85675121/154234664-5840f68e-33b8-4e49-89fa-b9b854773c75.png)
 
@@ -31,7 +29,7 @@ The Smart Echart Widget Plugin helps you to display API and datahub response on 
 
 ### Runtime Widget Deployment?
 
-* This widget support runtime deployment. Download [Runtime Binary](https://github.com/SoftwareAG/cumulocity-smart-echart-widget-plugin/releases/download/1.0.0-beta/smart-echart-runtime-widget-1.0.0-beta.zip) and install via Administrations(Beta mode) --> Ecosystems --> Applications --> Packages 
+* This widget support runtime deployment. Download [Runtime Binary](https://github.com/SoftwareAG/cumulocity-smart-echart-widget-plugin/releases/download/1.0.0/sag-ps-pkg-smart-echart-1.0.0.zip) and install via Administrations --> Ecosystems --> Applications --> Packages 
 
 ## QuickStart
   
@@ -45,25 +43,20 @@ This guide will teach you how to add widget in your existing or new dashboard.
   
 
 1. Open you application from App Switcher
-  
 
 2. Add new dashboard or navigate to existing dashboard
-  
 
 3. Click `Add Widget`
   
-
-4. Search for `Smart E Chart`
-
+4. Search for `Smart Echart`
 
 5. Select `Target API or Datahub`
-
 
 6. Fill Options required
 
 7. Click `Save`
 
-Congratulations! Smart E Chart is configured.
+Congratulations! Smart Echart is configured.
 
 ## User Guide
 

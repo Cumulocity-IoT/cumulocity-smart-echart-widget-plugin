@@ -1,16 +1,18 @@
 {
   "name": "cumulocity-smart-echart-widget-plugin",
-  "version": "1.0.0-beta",
+  "version": "1.0.0",
   "description": "The Smart Echart widget helps you to display API and datahub response on a chart with color configurations.",
   "scripts": {
     "start": "c8ycli server",
-    "build": "c8ycli build",
+    "build": "c8ycli build --env.mode=production",
     "deploy": "c8ycli deploy",
     "postinstall": "ngcc",
     "prebuild": " gulp clean",
     "postbuild": " gulp bundle"
   },
-  "keywords": [],
+  "keywords": ["Cumulocity",
+  "Plugin",
+  "Widget"],
   "author": "Software AG, Global Presales",
   "license": "Apache-2.0",
   "dependencies": {
@@ -58,10 +60,10 @@
   },
   "c8y": {
     "application": {
-      "name": "Cumulocity Smart Echart Widget Plugin",
+      "name": "Smart Echart Widget",
       "description": "The Smart Echart widget helps you to display API and datahub response on a chart with color configurations.",
-      "contextPath": "smart-echart-runtime-widget",
-      "key": "smart-echart-runtime-widget-application-key",
+      "contextPath": "sag-ps-pkg-smart-echart",
+      "key": "sag-ps-pkg-smart-echart-application-key",
       "globalTitle": "The Smart Echart widget helps you to display API and datahub response on a chart with color configurations.",
       "tabsHorizontal": true,
       "isPackage": true,
@@ -73,7 +75,7 @@
       "requiredPlatformVersion": ">=1016.0.0",
       "exports": [
         {
-          "name": "Cumulocity Smart EChart Widget Plugin",
+          "name": "Smart EChart Widget",
           "module": "GpSmartEchartWidgetModule",
           "path": "./widget/gp-smart-echart-widget.module.ts",
           "description": "The Smart Echart widget helps you to display API and datahub response on a chart with color configurations."

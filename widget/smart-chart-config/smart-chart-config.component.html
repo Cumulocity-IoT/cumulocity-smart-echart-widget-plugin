@@ -1,7 +1,7 @@
 <div class="configSection">
     <h4 translate>DataSource</h4>
-    <div class="row ">
-        <div class="col-xs-2 col-md-2">
+    <div class="row col-sm-12">
+        <div class="col-sm-4 col-md-4">
             <label for="api" title="API URL" class="c8y-radio radio-inline">
                 <input type="radio" id="api" name="dataSource" value="API"
                     (change)="dataSourceSelection($event.target.value)" [(ngModel)]="config.dataSource">
@@ -9,7 +9,7 @@
                 <span>API URL</span>
             </label>
         </div>
-        <div class="col-xs-2 col-md-2">
+        <div class="col-sm-4 col-md-4">
             <label for="datahub" title="DataHub" class="c8y-radio radio-inline">
                 <input type="radio" id="datahub" name="dataSource" value="datahub"
                     (change)="dataSourceSelection($event.target.value)" [(ngModel)]="config.dataSource"
@@ -18,7 +18,7 @@
                 <span>DataHub</span>
             </label>
         </div>
-        <div class="col-xs-2 col-md-2">
+        <div class="col-sm-4 col-md-4">
             <label for="microservice" title="Microservice" class="c8y-radio radio-inline">
                 <input type="radio" id="microservice" name="dataSource" value="microservice"
                     (change)="dataSourceSelection($event.target.value)" [(ngModel)]="config.dataSource"
@@ -27,21 +27,21 @@
                 <span>Microservice</span>
             </label>
         </div>
-        <div class="col-xs-2 col-md-2"></div>
-        <div class="col-xs-4 col-md-4 " *ngIf="config.showApiInput">
-            <label for="listname">List Name</label>
-            <input type="text" class="form-control" name="listname" [(ngModel)]="config.listName">
-        </div>
     </div>
     <!-- ENd of DataSource Radio Button Selection -->
-    <div class="row">
+    <div class="row col-sm-12">
         <ng-container *ngIf="config.showApiInput">
-            <div class="col-xs-6 col-md-6">
+            <div class="col-sm-8 col-md-8">
+                <label for="apiUrl" style="visibility: hidden;">API URL</label>
                 <input class="form-control" type="text" placeholder="API URL" [(ngModel)]="config.apiUrl">
+            </div>
+            <div class="col-sm-4 col-md-4 " *ngIf="config.showApiInput">
+                <label for="listname">List Name</label>
+                <input type="text" class="form-control" name="listname" [(ngModel)]="config.listName">
             </div>
         </ng-container>
         <ng-container *ngIf="config.showDatahubInput">
-            <div class="col-xs-6 col-md-6">
+            <div class="col-sm-8 col-md-8">
                 <input class="form-control" type="text" placeholder="Datahub URL" [(ngModel)]="config.datahubUrl">
                 <div>
                     <textarea class="form-control" placeholder="Sql Query" rows="3" cols="30"
@@ -49,7 +49,7 @@
                     </textarea>
                 </div>
             </div>
-            <div class="col-xs-6 col-md-6">
+            <div class="col-sm-4 col-md-4">
                 <label for="sqlLimit">Sql Result Limit</label>
                 <div>
                     <input name="sqlLimit" [(ngModel)]="config.sqlLimit" type="number" min="100" max="20000" step="1" />
@@ -58,7 +58,7 @@
 
         </ng-container>
         <ng-container *ngIf="config.showMicroserviceInput">
-            <div class="col-xs-6 col-md-6">
+            <div class="col-sm-8 col-md-8">
                 <input class="form-control" type="text" placeholder="API URL" [(ngModel)]="config.microserviceUrl">
             </div>
         </ng-container>
@@ -67,8 +67,8 @@
 </div>
 <div class="configSection">
     <h4 translate>Chart Config</h4>
-    <div class="row ">
-        <div class="col-xs-3 col-md-3">
+    <div class="row col-sm-12">
+        <div class="col-sm-4 col-md-4">
             <label for="type">Chart Type</label>
             <div class="c8y-select-wrapper">
                 <select id="selectExample" class="form-control" name="type" (change)="onSelection($event.target.value)"
@@ -80,7 +80,7 @@
             </div>
         </div>
         <!-- dont show div if config.type is scatter or radar -->
-        <div *ngIf=" config.type!=='radar'" class="col-xs-3 col-md-3">
+        <div *ngIf="config.type!=='radar'" class="col-sm-4 col-md-4">
             <label for="layout">Chart Layout</label>
             <div class="c8y-select-wrapper">
                 <select name="layout" id="selectExample" class="form-control" [(ngModel)]="config.layout"
@@ -91,7 +91,7 @@
                 </select>
             </div>
         </div>
-        <div class="col-xs-3 col-md-3" *ngIf="config.type!=='pie' && config.type!=='radar' && config.type!=='polar'">
+        <div class="col-sm-4 col-md-4" *ngIf="config.type!=='pie' && config.type!=='radar' && config.type!=='polar'">
             <label for="fontSize">Font Size</label>
             <div>
                 <output>{{config.fontSize}}</output>
@@ -99,34 +99,34 @@
             </div>
         </div>
     </div>
-    <div class="row " *ngIf="config.type=='pie'">
-        <div class="col-xs-3 col-md-3">
+    <div class="row col-sm-12" *ngIf="config.type=='pie'">
+        <div class="col-sm-4 col-md-4">
             <label for="listname">PieSliceValue</label>
             <input type="text" class="form-control" name="listname" [(ngModel)]="config.pieSliceValue">
         </div>
-        <div class="col-xs-3 col-md-3">
+        <div class="col-sm-4 col-md-4">
             <label for="listname">PieSliceName</label>
             <input type="text" class="form-control" name="listname" [(ngModel)]="config.pieSlicenName">
         </div>
     </div>
-    <div class="row " *ngIf="config.type==='polar'">
-        <div class="col-xs-3 col-md-3">
+    <div class="row col-sm-12" *ngIf="config.type==='polar'">
+        <div class="col-sm-4 col-md-4">
             <label for="xAxisDimension">X-Axis Dimension</label>
             <input class="form-control" name="url" type="text" [(ngModel)]="config.xAxisDimension">
         </div>
-        <div class="col-xs-3 col-md-3">
+        <div class="col-sm-4 col-md-4">
             <label for="yAxisDimension">Y-Axis Dimension</label>
             <input class="form-control" name="yAxisDimension" type="text" [(ngModel)]="config.yAxisDimension"
                 (change)="yAxisDimensionUpdate(config.yAxisDimension)">
         </div>
-        <div class="col-xs-3 col-md-3">
+        <div class="col-sm-4 col-md-4">
             <label for="PolarRadius">Polar Chart radius</label>
             <input class="form-control" name="PolarRadius" type="text" [(ngModel)]="config.polarChartRadius"
                 placeholder="40% or 10%,40%">
         </div>
     </div>
-    <div class="row " *ngIf="config.type!=='pie'">
-        <div class="col-xs-3 col-md-3">
+    <div class="row col-sm-12" *ngIf="config.type!=='pie'">
+        <div class="col-sm-4 col-md-4">
             <label for="xAxisType">X-Axis Type</label>
             <div class="c8y-select-wrapper">
                 <select id="selectExample" class="form-control" name="xAxisType" [(ngModel)]="config.xAxis">
@@ -136,11 +136,11 @@
                 </select>
             </div>
         </div>
-        <div class="col-xs-3 col-md-3" *ngIf="config.type!=='polar'">
+        <div class="col-sm-4 col-md-4" *ngIf="config.type!=='polar'">
             <label for="xAxisDimension">X-Axis Dimension</label>
             <input class="form-control" name="url" type="text" [(ngModel)]="config.xAxisDimension">
         </div>
-        <div class="col-xs-3 col-md-3" *ngIf="config.type!=='pie' && config.type!=='radar' && config.type!=='polar'">
+        <div class="col-sm-4 col-md-4" *ngIf="config.type!=='pie' && config.type!=='radar' && config.type!=='polar'">
             <label for="xrotateLabels">X-Axis Rotate Labels</label>
             <div>
                 <output>{{config.xAxisRotateLabels}}</output>
@@ -150,8 +150,8 @@
         </div>
     </div>
     <!-- End of X axis Config -->
-    <div class="row " *ngIf="config.type!=='pie' && config.type!=='radar' && config.type!=='polar'">
-        <div class="col-xs-3 col-md-3">
+    <div class="row col-sm-12" *ngIf="config.type!=='pie' && config.type!=='radar' && config.type!=='polar'">
+        <div class="col-sm-4 col-md-4">
             <label for="yAxisType">Y-Axis Type</label>
             <div class="c8y-select-wrapper">
                 <select id="selectExample" class="form-control" name="yAxisType" [(ngModel)]="config.yAxis">
@@ -161,12 +161,12 @@
                 </select>
             </div>
         </div>
-        <div class="col-xs-3 col-md-3">
+        <div class="col-sm-4 col-md-4">
             <label for="yAxisDimension">Y-Axis Dimension</label>
             <input class="form-control" name="yAxisDimension" type="text" [(ngModel)]="config.yAxisDimension"
                 (change)="yAxisDimensionUpdate(config.yAxisDimension)">
         </div>
-        <div class="col-xs-3 col-md-3" *ngIf="config.type!=='pie' && config.type!=='radar' && config.type!=='polar'">
+        <div class="col-sm-4 col-md-4" *ngIf="config.type!=='pie' && config.type!=='radar' && config.type!=='polar'">
             <label for="yrotateLabels">Y-Axis Rotate Labels</label>
             <div>
                 <output>{{config.yAxisRotateLabels}}</output>
@@ -177,12 +177,12 @@
     </div>
     <!-- End of y axis Config -->
     <!-- Start of Radar config -->
-    <div class="row" *ngIf="config.type=='radar'">
-        <div class="col-xs-3 col-md-3">
+    <div class="row col-sm-12" *ngIf="config.type=='radar'">
+        <div class="col-sm-4 col-md-4">
             <label for="radarDimensions">Radar Dimensions</label>
             <input class="form-control" name="radarDimensions" type="text" [(ngModel)]="config.radarDimensions">
         </div>
-        <div class="col-xs-3 col-md-3">
+        <div class="col-sm-4 col-md-4">
             <label for="RadarRadius">Radar Chart radius</label>
             <input class="form-control" name="RadarRadius" type="text" [(ngModel)]="config.radarChartRadius"
                 placeholder="40% or 10%,40%">
@@ -194,20 +194,20 @@
 <!-- Pie Chart Config Section -->
 <div class="configSection" *ngIf="config.type=='pie'">
     <h4 translate>Pie Chart Settings</h4>
-    <div class="row form-group">
-        <div class="col-xs-3 col-md-3">
+    <div class="row col-sm-12 form-group">
+        <div class="col-sm-4 col-md-4">
             <label for="radius">Pie Radius</label>
             <input class="form-control" name="radius" type="text" placeholder="40% or 10%,40%"
                 [(ngModel)]="config.radius">
         </div>
-        <div class="col-xs-3 col-md-3">
+        <div class="col-sm-4 col-md-4">
             <label for="pieBorderRadius">Border Radius</label>
-            <input class="form-control" name="pieBorderRadius" type="number" min='0' max='30' placeholder="0" value="0"
+            <input class="form-control" name="pieBorderRadius" type="number" min='0' max='40' placeholder="0" value="0"
                 [(ngModel)]="config.pieBorderRadius">
         </div>
-        <div class="col-xs-3 col-md-3">
+        <div class="col-sm-4 col-md-4">
             <label for="pieBorderWidth">Border Width</label>
-            <input class="form-control" name="pieBorderWidth" type="number" min='0' max='30' placeholder="0" value="0"
+            <input class="form-control" name="pieBorderWidth" type="number" min='0' max='40' placeholder="0" value="0"
                 [(ngModel)]="config.pieBorderWidth">
         </div>
     </div>
@@ -216,8 +216,8 @@
 <!-- Scatter Chart Config -->
 <div class="configSection" *ngIf="config.type==='scatter'">
     <h4 translate>Scatter Chart Settings</h4>
-    <div class="row form-group">
-        <div class="col-xs-3 col-md-3">
+    <div class="row form-group col-sm-12">
+        <div class="col-sm-4 col-md-4">
             <label title="Bubble Size" for="symbolSize">Bubble Size</label>
             <input class="form-control" name="symbolSize" type="number" placeholder="Enter a number"
                 [(ngModel)]="config.scatterSymbolSize" min="5" max="20">
@@ -228,8 +228,8 @@
 <!-- Stack Chart Config -->
 <div class="configSection" *ngIf="config.layout==='stacked' || config.layout==='stackedBar'">
     <h4 translate>Stack Config</h4>
-    <div class="row form-group">
-        <div class="col-xs-3 col-md-3">
+    <div class="row form-group col-sm-12">
+        <div class="col-sm-4 col-md-4">
             <label class="c8y-checkbox checkbox-inline" title="addStack">
                 <input type="checkbox" value="Add Stack" [(ngModel)]="config.addStack"
                     (click)="stackAdded($event.target.checked)">
@@ -237,30 +237,30 @@
                 <span>Add Stack</span>
             </label>
         </div>
-        <div class="col-xs-3 col-md-3">
-            <div *ngIf="config.addStack" class="col-xs-2 col-md-2">
+        <div class="col-sm-4 col-md-4">
+            <div *ngIf="config.addStack" class="col-sm-2 col-md-2">
                 <button type="button" class="btn btn-primary btn-xs" (click)="addAnotherStack()">Add
                     Another Stack</button>
             </div>
         </div>
         <div *ngIf="config.addStack">
             <ng-container *ngFor="let item of config.stackList;let i = index">
-                <div class="row col-xs-12 col-md-12 col-lg-12" style="margin-top: 5px;">
-                    <div class="col-md-2 col-xs-2">
+                <div class="row col-sm-12 col-md-12 col-lg-12" style="margin-top: 5px;">
+                    <div class="col-md-2 col-sm-2">
                         <label for="stackName">Stack Name</label>
                     </div>
-                    <div class="col-md-2 col-xs-2">
+                    <div class="col-md-2 col-sm-2">
                         <input class="form-control" name="stackName" type="text"
                             [(ngModel)]="config.stackList[i].stackName">
                     </div>
-                    <div class="col-md-2 col-xs-2">
+                    <div class="col-md-2 col-sm-2">
                         <label for="stackValues">Stack Values</label>
                     </div>
-                    <div class="col-md-2 col-xs-2">
+                    <div class="col-md-2 col-sm-2">
                         <input class="form-control" name="stackValues" type="text"
                             [(ngModel)]="config.stackList[i].stackValues">
                     </div>
-                    <div class="col-md-2 col-xs-2">
+                    <div class="col-md-2 col-sm-2">
                         <button class="btn btn-primary btn-xs btn-danger" (click)="deleteStackValue($event,i)">Delete
                             Stack</button>
                     </div>
@@ -273,13 +273,13 @@
 <!-- Line Chart Config Section -->
 <div class="configSection" *ngIf="config.type=='line'">
     <h4 translate>Line Chart Settings</h4>
-    <div class="row form-group">
-        <div class="col-xs-3 col-md-3">
+    <div class="row col-sm-12 form-group">
+        <div class="col-sm-4 col-md-4">
             <label title="Area Opacity" for="lineAreaOpacity">Area Opacity</label>
             <input class="form-control" type="number" name="lineAreaOpacity" [(ngModel)]="config.areaOpacity" min="0"
                 max="1" step="0.1">
         </div>
-        <div class="col-xs-3 col-md-3">
+        <div class="col-sm-4 col-md-4">
             <br />
             <label title="Area" class="c8y-checkbox" style="height: 35px;">
                 <input type="checkbox" value="true" [(ngModel)]="config.hasArea">
@@ -287,7 +287,7 @@
                 <span>Area</span>
             </label>
         </div>
-        <div class="col-xs-3 col-md-3">
+        <div class="col-sm-4 col-md-4">
             <br />
             <label title="Smooth Line" class="c8y-checkbox" style="height: 35px;">
                 <input type="checkbox" value="true" [(ngModel)]="config.smoothLine">
@@ -303,42 +303,42 @@
 <div class="configSection" *ngIf="config.type!=='radar'">
     <!-- *ngIf="config.type==='pie'||config.type==='bar'||config.type==='line' ||config.type==='polar' || config.type==='scatter' "> -->
     <h4 translate>Aggregate Config</h4>
-    <div class="col-xs-3 col-md-3">
+    <div class="col-sm-4 col-md-4" style="margin-top: 10px;">
         <label for="aggregation">Aggregate Method</label>
-        <button style="margin-left: 10px;" type="button" class="btn btn-primary btn-xs"
+        <button style="margin-left: 8px;" type="button" class="btn btn-primary btn-xs"
             (click)="addAnotherAggregate()">+</button>
     </div>
-    <div class="col-xs-12 col-md-12 col-lg-12">
+    <div class="col-sm-12 col-md-12 col-lg-12">
         <ng-container *ngFor="let item of config.aggrList;let i = index">
-            <div class="row col-xs-12 col-md-12 col-lg-12">
-                <div class="col-xs-1 col-md-1">
+            <div class="row col-sm-12 col-md-12 col-lg-12">
+                <div class="col-sm-2 col-md-2">
                     <label for="aggregateDimension">Dimension </label>
                 </div>
-                <div class="col-xs-2 col-md-2">
+                <div class="col-sm-3 col-md-3">
                     <input class="form-control" name="aggregateDimension" type="text"
                         [ngClass]="{'alertInput': isGroupByInAggregate === true}"
                         [(ngModel)]="config.aggrList[i].aggrDimesnion">
                 </div>
-                <div class="col-xs-1 col-md-1">
+                <div class="col-sm-2 col-md-2">
                     <label for="aggregation">Method</label>
                 </div>
-                <div class="col-xs-2 col-md-2">
+                <div class="col-sm-4 col-md-4">
                     <select name="aggregation" id="selectMethod" class="form-control"
                         [(ngModel)]="config.aggrList[i].aggrMethod">
                         <option *ngFor="let method of aggregationMethods" value="{{method.id}}">{{method.value}}
                         </option>
                     </select>
                 </div>
-                <div class="col-xs-2 col-md-2 ">
+                <div class="col-sm-1 col-md-1 ">
                     <button class="btn btn-primary btn-xs btn-danger" (click)="deleteAggrValue($event,i)">-</button>
                 </div>
             </div>
         </ng-container>
-        <div class="form-group col-xs-12 col-md-12 col-lg-12 row" *ngIf="isAggrAdded">
-            <div class="col-xs-1 col-md-1">
+        <div class="form-group col-sm-12 col-md-12 col-lg-12 row" *ngIf="isAggrAdded">
+            <div class="col-sm-2 col-md-2">
                 <label for="groupByDimension">GroupBy</label>
             </div>
-            <div class="col-xs-2 col-md-2">
+            <div class="col-sm-4 col-md-4">
                 <input class="form-control" name="groupByDimension" type="text" [(ngModel)]="config.groupBy">
             </div>
         </div>
@@ -348,8 +348,8 @@
 <!-- Legend Config Section -->
 <div class="configSection">
     <h4>Appearance Config</h4>
-    <div class="row">
-        <div class="col-xs-3 col-md-3">
+    <div class="row col-sm-12">
+        <div class="col-sm-4 col-md-4">
             <label for="legend">Legend Shape</label>
             <div class="c8y-select-wrapper">
                 <select name="legend" id="LegendSelect" class="form-control" [(ngModel)]="config.legend.icon">
@@ -359,7 +359,7 @@
                 </select>
             </div>
         </div>
-        <div class="col-xs-3 col-md-3" *ngIf="config.type==='line'  || config.type==='scatter'  || config.type==='bar'">
+        <div class="col-sm-4 col-md-4" *ngIf="config.type==='line'  || config.type==='scatter'  || config.type==='bar'">
             <br />
             <label title="Slider Zoom" class="c8y-checkbox" style="height: 35px;">
                 <input type="checkbox" value="false" [(ngModel)]="config.sliderZoom">
@@ -367,7 +367,7 @@
                 <span>Slider Zoom</span>
             </label>
         </div>
-        <div class="col-xs-3 col-md-3" *ngIf="config.type==='line'  || config.type==='scatter'  || config.type==='bar'">
+        <div class="col-sm-4 col-md-4" *ngIf="config.type==='line'  || config.type==='scatter'  || config.type==='bar'">
             <br />
             <label title="Box Zoom" class="c8y-checkbox" style="height: 35px;">
                 <input type="checkbox" value="false" [(ngModel)]="config.boxZoom">
@@ -377,18 +377,18 @@
         </div>
 
     </div>
-    <div class="row">
-        <div class="col-xs-3 col-md-3">
+    <div class="row col-sm-12">
+        <div class="col-sm-4 col-md-4">
             <label title="Chart Color" for="chartColor">Chart Color</label>
             <input type="text" name="chartColor" [(ngModel)]="config.colors"
                 (change)="colorUpdateByTyping($event.target.value)">
         </div>
-        <div class="col-xs-3 col-md-3">
+        <div class="col-sm-4 col-md-4">
             <br />
             <input class="form-control" type="color" placeholder="Enter color HEX"
                 (change)="colorUpdate($event.target.value)">
         </div>
-        <div class="col-xs-3 col-md-3">
+        <div class="col-sm-4 col-md-4">
             <br />
             <label title="DarkMode" class="c8y-checkbox" style="height: 35px;">
                 <input type="checkbox" value="false" [(ngModel)]="config.darkMode">
