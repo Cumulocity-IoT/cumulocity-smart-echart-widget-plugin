@@ -38,10 +38,6 @@ This guide will teach you how to add widget in your existing or new dashboard.
 
   
 
-**NOTE:** This guide assumes you have followed the [Installation instructions](#Installation)
-
-  
-
 1. Open you application from App Switcher
 
 2. Add new dashboard or navigate to existing dashboard
@@ -163,7 +159,7 @@ NOTE : In Simple charts, X-Axis can be category or value type and Y-Axis can be 
 
 ------------------------------
 
-##**Aggregation Utility**
+## **Aggregation Utility**
 
 Widget also provides aggregation functions as below:
 
