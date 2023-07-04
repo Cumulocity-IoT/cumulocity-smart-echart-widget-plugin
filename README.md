@@ -9,7 +9,7 @@ The Smart Echart Widget Plugin helps you to display API and datahub response on 
 |--------------------|------------|-----------------------------|
 | 2.0.x              | >= 1016.x.x| 1.x.x                       |
 
-![Picture1](https://user-images.githubusercontent.com/85675121/154234664-5840f68e-33b8-4e49-89fa-b9b854773c75.png)
+![Image](images/echart.png)
 
 ## Features
   
@@ -74,12 +74,15 @@ Congratulations! Smart Echart is configured.
 	]
 }`
 - In UI, the API datasource config would look like 
-![Datasource_API](https://user-images.githubusercontent.com/85675121/178733831-8cf0e257-1255-49e6-aaa6-a58969838cb0.PNG)
 
-- If Datahub is selected, user needs to provide a relative URL and the SQL query to get data from Datahub. 
-![Datasource_DataHub](https://user-images.githubusercontent.com/85675121/178725170-40fbcd1f-4279-4bea-8ac7-b6fd0a11de74.PNG)
+ ![Image](images/datasource.png)
+
+- If Datahub is selected, user needs to provide a relative URL and the SQL query to get data from Datahub.
+
+![Image](images/datahub.png)
 - If Microservice is selected, user needs to provide a relative URL
-![Datasource_Microservice](https://user-images.githubusercontent.com/85675121/178725293-958d3899-bb1f-4766-a2f9-96e7dc88ec53.PNG)
+
+![Image](images/ticketing.png)
 
 
 -   **Types Of Chart:** User can select a Chart Type and its Layout.Below is the detail of chart types available alongwith the options

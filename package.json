@@ -10,9 +10,11 @@
     "prebuild": " gulp clean",
     "postbuild": " gulp bundle"
   },
-  "keywords": ["Cumulocity",
-  "Plugin",
-  "Widget"],
+  "keywords": [
+    "Cumulocity",
+    "Plugin",
+    "Widget"
+  ],
   "author": "Software AG, Global Presales",
   "license": "Apache-2.0",
   "dependencies": {
@@ -85,7 +87,29 @@
         "widget-plugin": [
           "GpSmartEchartWidgetModule"
         ]
-      }
+      },
+      "copy": [
+        {
+          "from": "images/datahub.png",
+          "to": "images/datahub.png"
+        },
+        {
+          "from": "images/datasource.png",
+          "to": "images/datasource.png"
+        },
+        {
+          "from": "images/echart.png",
+          "to": "images/echart.png"
+        },
+        {
+          "from": "images/ticketing.png",
+          "to": "images/ticketing.png"
+        },
+        {
+          "from": "LICENSE",
+          "to": "LICENSE.txt"
+        }
+      ]
     },
     "cli": {}
   },
