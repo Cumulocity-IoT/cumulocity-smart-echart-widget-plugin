@@ -1,4 +1,4 @@
-# Cumulocity Smart Echart Widget Plugin [<img width="35" src="https://user-images.githubusercontent.com/32765455/211497905-561e9197-18b9-43d5-a023-071d3635f4eb.png"/>](https://github.com/SoftwareAG/cumulocity-smart-echart-widget-plugin/releases/download/1.0.0/sag-ps-pkg-smart-echart-1.0.0.zip)
+# Cumulocity Smart Echart Widget Plugin [<img width="35" src="https://user-images.githubusercontent.com/32765455/211497905-561e9197-18b9-43d5-a023-071d3635f4eb.png"/>](https://github.com/SoftwareAG/cumulocity-smart-echart-widget-plugin/releases/download/1.0.1/sag-ps-pkg-smart-echart-1.0.1.zip)
 
 The Smart Echart Widget Plugin is the Cumulocity module federation plugin created using c8ycli. This plugin can be used in Application Builder or Cockpit.
 The Smart Echart Widget Plugin helps you to display API and datahub response on a chart with color configurations.
@@ -28,7 +28,7 @@ The Smart Echart Widget Plugin helps you to display API and datahub response on 
 
 ### Runtime Widget Deployment?
 
-* This widget support runtime deployment. Download [Runtime Binary](https://github.com/SoftwareAG/cumulocity-smart-echart-widget-plugin/releases/download/1.0.0/sag-ps-pkg-smart-echart-1.0.0.zip) and install via Administrations --> Ecosystems --> Applications --> Packages 
+* This widget support runtime deployment. Download [Runtime Binary](https://github.com/SoftwareAG/cumulocity-smart-echart-widget-plugin/releases/download/1.0.1/sag-ps-pkg-smart-echart-1.0.1.zip) and install via Administrations --> Ecosystems --> Applications --> Packages 
 
 ## QuickStart
   
