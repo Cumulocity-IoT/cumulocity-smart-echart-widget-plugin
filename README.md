@@ -5,7 +5,7 @@ The Smart Echart Widget Plugin helps you to display API and datahub response on 
 
 ### Please choose Smart Echart Widget release based on Cumulocity/Application builder version:
 
-|APPLICATION BUILDER | CUMULOCITY | SMART ECHART WIDGET PLUGIN  |
+|APPLICATION BUILDER &nbsp;| &nbsp;CUMULOCITY&nbsp; | &nbsp;SMART ECHART WIDGET PLUGIN &nbsp; |
 |--------------------|------------|-----------------------------|
 | 2.0.x              | >= 1016.x.x| 1.x.x                       |
 
