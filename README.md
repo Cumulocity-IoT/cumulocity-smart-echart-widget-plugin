@@ -21,11 +21,10 @@ The Smart Echart Widget Plugin helps you to display API and datahub response on 
 
 *  **Configurable Zoom:**  Select the zoom which is best fit for your chart.
 
-
-## Installation
-
 ## Prerequisite
    Cumulocity c8ycli >=1016.x.x
+   
+## Installation
 
 ### Runtime Widget Deployment?
 
