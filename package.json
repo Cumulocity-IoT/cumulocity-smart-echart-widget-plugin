@@ -1,6 +1,6 @@
 {
   "name": "cumulocity-smart-echart-widget-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The Smart Echart widget helps you to display API and datahub response on a chart with color configurations.",
   "scripts": {
     "start": "c8ycli server",
